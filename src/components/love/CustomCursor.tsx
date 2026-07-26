@@ -11,8 +11,7 @@ export function CustomCursor() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    const isCoarse = window.matchMedia("(pointer: coarse)").matches;
-    if (isCoarse) return;
+    if (window.matchMedia("(pointer: coarse)").matches) return;
     document.documentElement.classList.add("cursor-love");
     const move = (e: MouseEvent) => {
       x.set(e.clientX);
@@ -40,7 +39,7 @@ export function CustomCursor() {
       className="pointer-events-none fixed left-0 top-0 z-[9999] -translate-x-1/2 -translate-y-1/2"
     >
       <div
-        className="relative flex items-center justify-center transition-all duration-200"
+        className="relative flex items-center justify-center transition-opacity duration-200"
         style={{ opacity: hidden ? 0 : 1 }}
       >
         {glyph ? (
