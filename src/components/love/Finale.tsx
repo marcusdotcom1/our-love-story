@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { motion } from "framer-motion";
 
-const LINES = ["You are my favorite chapter.", "I love you.", "Today.", "Tomorrow.", "Always."];
+const LINES = ["Aynu, you are my favorite chapter.", "I love you.", "Today.", "Tomorrow.", "Always."];
 
 export function Finale() {
   const petals = useMemo(

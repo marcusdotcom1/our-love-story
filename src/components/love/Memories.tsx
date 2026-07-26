@@ -1,19 +1,19 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-const CAPTIONS = [
-  "The first coffee",
-  "Rainy Sundays",
-  "Golden hour",
-  "That silly dance",
-  "Sunday market",
-  "Beach at dusk",
-  "Your favorite song",
-  "Handwritten notes",
-  "Kitchen laughter",
-  "Long walks",
-  "Tiny victories",
-  "Slow mornings",
+const MEMORIES = [
+  { caption: "Your eyes, my favorite view", file: "/WhatsApp Image 2026-07-26 at 19.03.28.jpeg" },
+  { caption: "That smile of yours", file: "/IMG_0061.JPG.jpeg" },
+  { caption: "Prettier than sunsets", file: "/IMG_0349.JPG.jpeg" },
+  { caption: "Your silly, cute smile", file: "/IMG_1708.MOV" },
+  { caption: "Most gorgeous girl", file: "/IMG_0588.JPG.jpeg" },
+  { caption: "Absolutely breathtaking", file: "/IMG_2364.JPG.jpeg" },
+  { caption: "Your sweet, sweet voice", file: "/IMG_2635.MOV" },
+  { caption: "Lost in your beauty", file: "/IMG_0354.JPG.jpeg" },
+  { caption: "My beautiful Aynu", file: "/WhatsApp Image 2026-07-26 at 19.03.28.jpeg" },
+  { caption: "Pure perfection", file: "/IMG_0061.JPG.jpeg" },
+  { caption: "My stunning girl", file: "/IMG_0349.JPG.jpeg" },
+  { caption: "Just looking at you...", file: "/IMG_0588.JPG.jpeg" },
 ];
 
 const GRADIENTS = [
@@ -41,7 +41,7 @@ export function MemoriesChapter() {
           </p>
         </div>
         <motion.div style={{ x }} className="relative flex items-center gap-10 pl-16 pr-24">
-          {CAPTIONS.map((cap, i) => {
+          {MEMORIES.map((m, i) => {
             const rot = (i % 5) - 2;
             const g = GRADIENTS[i % GRADIENTS.length];
             return (
@@ -65,13 +65,18 @@ export function MemoriesChapter() {
                   }}
                 />
                 <div className={"relative h-[320px] w-full overflow-hidden bg-gradient-to-br " + g}>
-                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(255,255,255,0.5),transparent_60%)]" />
-                  <span className="absolute bottom-3 right-3 font-script text-lg text-white/80 drop-shadow">
+                  {m.file.toLowerCase().endsWith(".mov") ? (
+                    <video src={m.file} autoPlay loop muted playsInline className="absolute inset-0 h-full w-full object-cover" />
+                  ) : (
+                    <img src={m.file} alt={m.caption} className="absolute inset-0 h-full w-full object-cover" />
+                  )}
+                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(255,255,255,0.2),transparent_60%)] pointer-events-none" />
+                  <span className="absolute bottom-3 right-3 font-script text-lg text-white/90 drop-shadow pointer-events-none">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
                 <figcaption className="mt-4 text-center font-hand text-sm text-[oklch(0.35_0.05_25)] opacity-70 transition-opacity group-hover:opacity-100">
-                  {cap}
+                  {m.caption}
                 </figcaption>
               </motion.figure>
             );

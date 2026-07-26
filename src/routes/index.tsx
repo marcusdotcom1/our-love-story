@@ -11,14 +11,16 @@ import { InfiniteSky } from "@/components/love/InfiniteSky";
 import { Promises } from "@/components/love/Promises";
 import { Timeline } from "@/components/love/Timeline";
 import { FloatingMemories } from "@/components/love/FloatingMemories";
+import { PlayStationQuestion } from "@/components/love/PlayStationQuestion";
 import { Letter } from "@/components/love/Letter";
 import { Finale } from "@/components/love/Finale";
 import { ScrollProgress } from "@/components/love/ScrollProgress";
+import { MusicWidget } from "@/components/love/MusicWidget";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Our Story — Happy Anniversary, My Love" },
+      { title: "Our Story — Happy 6 Months, My Love" },
       {
         name: "description",
         content:
@@ -57,14 +59,15 @@ function Index() {
           </motion.div>
         ) : (
           <motion.main key="story" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.4 }}>
+            <MusicWidget />
             <ScrollProgress />
             <EnvelopeChapter />
             <MemoriesChapter />
             <LittleThings />
             <InfiniteSky />
             <Promises />
-            <Timeline />
             <FloatingMemories />
+            <PlayStationQuestion />
             <Letter />
             <Finale />
           </motion.main>

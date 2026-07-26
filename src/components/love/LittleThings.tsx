@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 
 const NOTES = [
-  "The way you smile.",
-  "The way you laugh.",
-  "The way you care.",
-  "The way you understand me.",
-  "The way you make ordinary days magical.",
-  "The way you hold my hand without saying anything.",
+  "Your eyes are so incredibly beautiful, I get lost in them.",
+  "Your smile can light up my darkest days.",
+  "You are the most gorgeous girl in the whole world.",
+  "Your voice is my absolute favorite melody.",
+  "I fall in love with your pure heart every single day.",
+  "Everything about you, Aynu, is just pure perfection.",
 ];
 
 const POS = [

@@ -5,7 +5,7 @@ const EVENTS = [
   { date: "First Coffee", text: "Two cups, three hours, one beginning." },
   { date: "First Trip", text: "A small city, a big feeling." },
   { date: "Moving In", text: "Boxes, laughter, forever a little closer." },
-  { date: "Today", text: "Another year of choosing us." },
+  { date: "Today", text: "Six beautiful months of choosing us." },
 ];
 
 export function Timeline() {

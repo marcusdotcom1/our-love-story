@@ -18,7 +18,7 @@ export function Letter() {
           <div className="absolute -top-4 left-1/2 h-24 w-8 -translate-x-1/2 rotate-[3deg] bg-[oklch(0.88_0.03_80/0.7)] shadow" />
           <p className="text-center text-xs uppercase tracking-[0.4em] text-[oklch(0.45_0.05_25)]">Chapter VIII</p>
           <p className="mt-4 text-center font-script text-5xl text-[oklch(0.35_0.1_20)]">My Letter</p>
-          <p className="mt-12 font-hand text-lg leading-relaxed text-[oklch(0.3_0.05_25)]">My Love,</p>
+          <p className="mt-12 font-hand text-lg leading-relaxed text-[oklch(0.3_0.05_25)]">My Dearest Aynu,</p>
           <div className="mt-8 space-y-8">
             {PARAGRAPHS.map((p, i) => (
               <motion.p
@@ -39,7 +39,7 @@ export function Letter() {
               transition={{ duration: 1.5, delay: 0.4 }}
               className="pt-6 font-script text-3xl text-[oklch(0.4_0.1_20)]"
             >
-              Happy Anniversary, my love.
+              Happy 6 Months, my love.
             </motion.p>
             <p className="font-script text-2xl text-[oklch(0.45_0.09_20)]">Forever Yours.</p>
           </div>

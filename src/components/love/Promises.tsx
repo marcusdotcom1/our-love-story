@@ -5,7 +5,7 @@ const PROMISES = [
   "I promise to support your dreams.",
   "I promise to protect your smile.",
   "I promise to choose you every single day.",
-  "I promise to grow with you, gently, always.",
+  "I promise to grow with you, Aynu, gently, always.",
 ];
 
 export function Promises() {
